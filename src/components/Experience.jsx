@@ -6,7 +6,7 @@ const timelineItems = [
     meta: '2024 — Present',
     title: 'BS Software Engineering',
     company: 'Islamia college university peshawar',
-    desc: 'Studying core computer science fundamentals including algorithms, data structures, operating systems, databases, and software engineering principles. Maintaining strong academic performance while working on practical projects.',
+    desc: "Pursuing a Bachelor's degree in Software Engineering, building a strong foundation in programming, data structures, databases, software engineering, and web development. Alongside academics, working on practical projects and continuously developing my skills as a full-stack developer."
   },
   {
     meta: '2025',
@@ -18,7 +18,7 @@ const timelineItems = [
     meta: '2026',
     title: 'Full Stack Developer',
     company: 'GitHub Community',
-    desc: 'Started contributing to open source projects to sharpen programming skills and collaborate with developers worldwide. Focused on documentation improvements and beginner-friendly bug fixes.',
+    desc: "Building practical web applications using MongoDB, Express.js, React, and Node.js. Developed projects including a full-stack Task Manager with authentication, task management, notifications, and a responsive user interface."    
   },
 ];
 

@@ -28,7 +28,7 @@ export default function Contact() {
               <div className="contact-link-icon">✉</div>
               sajidsafi396@gmail.com
             </a>
-            <a href="https://linkedin.com/in/sajid-ullah-8b6668350" target="_blank" rel="noreferrer" className="contact-link">
+            <a href="https://www.linkedin.com/in/sajid-ullah-8b6668350/" target="_blank" rel="noreferrer" className="contact-link">
               <div className="contact-link-icon">in</div>
               sajid ullah
             </a>

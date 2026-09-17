@@ -3,7 +3,7 @@ import './About.css';
 
 const stats = [
   { num: '2+', label: 'Years Coding' },
-  { num: '20+', label: 'Projects Built' },
+  { num: '5+', label: 'Projects Built' },
   { num: '5+', label: 'Technologies' },
   { num: '∞', label: 'Curiosity' },
 ];

@@ -129,7 +129,7 @@
 }
 h1.hero-name {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4rem, 9vw, 10rem);
+  font-size: clamp(3rem, 12vw, 10rem);
   line-height: 0.9;
   letter-spacing: 0.02em;
   margin-bottom: 1rem;
@@ -174,23 +174,86 @@ h1.hero-name .outline {
   background: linear-gradient(to bottom, var(--accent), transparent);
 }
 
+/* Small laptops / large tablets — desktop layout, tighter spacing */
+@media (max-width: 1200px) {
+  #hero { padding: 0 2.5rem 4rem; }
+  .photo-wrap { margin-right: 40px; }
+}
+
+/* Tablets landscape — still side-by-side, but cramped otherwise */
+@media (max-width: 1024px) {
+  #hero { padding: 0 2rem 4rem; }
+  .first { margin-left: 30px; }
+  .photo-wrap { margin-right: 20px; }
+}
+
+/* Tablets portrait / large phones — stack vertically */
 @media (max-width: 900px) {
   #hero {
-    padding: 0 1.5rem 4rem;
+    padding: 6rem 1.5rem 4rem;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
   .photo-wrap {
-    width: 150px;
-    height: 150px;
-    margin: 0 0 2.5rem;
+    width: 220px;
+    height: 220px;
+    margin: 4.5rem 0 2.5rem;
   }
   .orbit-ring {
-    --orbit-radius: 95px;
+    --orbit-radius: 140px;
   }
   .first {
     margin-left: 0;
     margin-top: 40px;
   }
+  .hero-cta { justify-content: center; }
+  .hero-scroll { display: none; }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  #hero { padding: 5rem 1.25rem 3rem; }
+  .photo-wrap {
+    width: 170px;
+    height: 170px;
+    margin-top: 4rem;
+  }
+  .orbit-ring {
+    --orbit-radius: 105px;
+  }
+  .orbit-icon {
+    width: 36px;
+    height: 36px;
+    top: -18px;
+    left: -18px;
+  }
+  .hero-sub {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Small phones (SE, older Android) */
+@media (max-width: 380px) {
+  .photo-wrap {
+    width: 140px;
+    height: 140px;
+    margin-top: 3.5rem;
+  }
+  .orbit-ring {
+    --orbit-radius: 85px;
+  }
+  .orbit-icon {
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -15px;
+    padding: 6px;
+  }
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn { width: 100%; justify-content: center; }
 }

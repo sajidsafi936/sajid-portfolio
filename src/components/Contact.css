@@ -67,6 +67,7 @@
 .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
 .form-textarea { min-height: 120px; }
 
+.btn-primary{cursor: pointer;}
 @media (max-width: 900px) {
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
 }

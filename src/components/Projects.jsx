@@ -6,8 +6,8 @@ const projects = [
     num: '01',
     name: 'Task Manager App',
     desc: 'A full-stack task management application with user authentication, real-time updates, and a clean responsive interface.',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    link: '#',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
+    link: 'https://task-manager-delta-liard-37.vercel.app',
   },
   {
     num: '02',

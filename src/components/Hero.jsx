@@ -35,7 +35,7 @@ export default function Hero() {
         </h1>
         <h1>Full Stack Developer</h1>
         <p className="hero-sub">
-          Building <em>clean, scalable</em> software — passionate about turning complex problems into elegant digital solutions.
+          Building <em>clean, scalable</em> websites — passionate about turning complex problems into elegant digital solutions.
         </p>
         <div className="hero-cta">
           <a href="#projects" className="btn btn-primary">View Projects ↓</a>

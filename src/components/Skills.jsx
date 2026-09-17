@@ -4,11 +4,11 @@ import './Skills.css';
 const skillGroups = [
   {
     title: 'Languages',
-    items: ['Python', 'JavaScript / TypeScript', 'C / C++', 'Java', 'HTML & CSS'],
+    items: ['JavaScript / TypeScript', 'Python', 'C / C++', 'Java', 'HTML & CSS'],
   },
   {
     title: 'Frameworks & Tools',
-    items: ['React.js', 'Node.js / Express', 'Git & GitHub', 'REST APIs', 'SQL / MySQL'],
+    items: ['React.js', 'Node.js / Express', 'MongoDB', 'REST APIs', 'Git & GitHub'],
   },
   {
     title: 'Concepts',
