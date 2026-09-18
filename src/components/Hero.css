@@ -129,7 +129,7 @@
 }
 h1.hero-name {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3rem, 12vw, 10rem);
+  font-size: clamp(3rem, 10vw, 9rem);
   line-height: 0.9;
   letter-spacing: 0.02em;
   margin-bottom: 1rem;

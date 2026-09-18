@@ -1,15 +1,48 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import useScrollReveal from '../hooks/useScrollReveal.js';
 import './Contact.css';
+
+const SERVICE_ID = 'service_ypooqaf';
+const TEMPLATE_ID = 'template_7f2jnga';
+const PUBLIC_KEY = 'zP_H-vYI-GMBu8H9M';
 
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('idle'); // idle | sending | sent | error
   const addReveal = useScrollReveal();
 
   const handleSend = () => {
-    alert('Message sent! (Update this with your backend)');
+    if (!name || !email || !message) {
+      alert('Please fill in all fields before sending.');
+      return;
+    }
+
+    setStatus('sending');
+
+    emailjs
+      .send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: name,
+          from_email: email,
+          message: message,
+        },
+        PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus('sent');
+        setName('');
+        setEmail('');
+        setMessage('');
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error?.text || error);
+        setStatus('error');
+      });
   };
 
   return (
@@ -72,9 +105,20 @@ export default function Contact() {
             className="btn btn-primary"
             style={{ alignSelf: 'flex-start' }}
             onClick={handleSend}
+            disabled={status === 'sending'}
           >
-            Send Message →
+            {status === 'sending' ? 'Sending...' : 'Send Message →'}
           </button>
+          {status === 'sent' && (
+            <p style={{ color: 'var(--accent)', fontSize: '0.85rem' }}>
+              Message sent — thanks for reaching out!
+            </p>
+          )}
+          {status === 'error' && (
+            <p style={{ color: '#ff4d4d', fontSize: '0.85rem' }}>
+              Something went wrong. Please try again or email me directly.
+            </p>
+          )}
         </div>
       </div>
     </section>
